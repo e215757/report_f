@@ -1,9 +1,9 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 import java.util.Random;
 
 public class Sugoroku {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System. in);
+        //Scanner scanner = new Scanner(System. in);
         Random random = new Random();
         int diceNumber = 0;
         int location = 0;
@@ -11,13 +11,13 @@ public class Sugoroku {
         System.out.println("すごろくはじめ！");
 
         while (location < 10){
-            System.out.println("press enter");
-            scanner.nextLine();
+            //System.out.println("press enter");
+            //scanner.nextLine();
             diceNumber = random.nextInt(6) + 1;
             System.out.println(diceNumber + "が出ました");
             location += diceNumber;
             System.out.println(location + "マス目に進みました");
-            showSugorokBan(location);
+            showSugorokuBan(location);
 
             switch(location){
                 case 2:
@@ -25,7 +25,7 @@ public class Sugoroku {
                     System.out.println("１マス進みます");
                     location += 1;
                     System.out.println(location + "マス目に進みました");
-                    showSugorokBan(location);
+                    showSugorokuBan(location);
                     break;                
             
 
@@ -33,7 +33,7 @@ public class Sugoroku {
                     System.out.println("\n穴に落ちました");
                     System.out.println("スタートに戻りました");
                     location = 0;
-                    showSugorokBan(location);
+                    showSugorokuBan(location);
                     break;
                 
 
@@ -42,7 +42,7 @@ public class Sugoroku {
                     System.out.println("2マス戻ります");
                     location -= 2;
                     System.out.println(location + "マス目に進みました");
-                    showSugorokBan(location);
+                    showSugorokuBan(location);
                     break;
             
             }
@@ -52,7 +52,7 @@ public class Sugoroku {
                 System.out.println("ゴールできませんでした");
             }
             System.out.println("すごろく終了");
-            scanner.close();
+            //scanner.close();
         }
         
     }
